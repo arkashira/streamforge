@@ -1,9 +1,16 @@
-# Anomaly Detection
+# streamforge
 
-This project provides a simple anomaly detection system using the Isolation Forest algorithm.
+A tiny, pure‑Python, in‑memory Kafka‑like streaming library used for unit‑testing
+data‑ingestion pipelines.
 
-## Usage
+## Features
 
-1. Install the project using `poetry install`.
-2. Run the tests using `pytest`.
-3. Use the `get_anomaly_scores` function to detect anomalies in your data.
+* Automatic creation of a topic `ts_ingest`.
+* Producer / Consumer with at‑least‑once delivery semantics.
+* Simple back‑pressure handling – the producer blocks when the internal queue
+  exceeds a configurable limit (default 1 000 messages).
+
+The implementation uses only the Python standard library and is deliberately
+minimal; it is **not** a production‑ready Kafka client.
+
+## Running the tests
