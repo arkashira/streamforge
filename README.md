@@ -1,16 +1,11 @@
-# streamforge
+# Ingest Engine
+A simple ingest engine for CSV and JSON files.
 
-A tiny, pure‑Python, in‑memory Kafka‑like streaming library used for unit‑testing
-data‑ingestion pipelines.
+## Usage
+1. Create an instance of the `IngestEngine` class.
+2. Call the `ingest` method with a file path to start a new ingest job.
+3. Call the `process_job` method with the job ID to process the job.
+4. Call the `get_job_status` method with the job ID to get the job status.
 
-## Features
-
-* Automatic creation of a topic `ts_ingest`.
-* Producer / Consumer with at‑least‑once delivery semantics.
-* Simple back‑pressure handling – the producer blocks when the internal queue
-  exceeds a configurable limit (default 1 000 messages).
-
-The implementation uses only the Python standard library and is deliberately
-minimal; it is **not** a production‑ready Kafka client.
-
-## Running the tests
+## Testing
+Run the tests using `pytest`.
