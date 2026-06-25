@@ -1,0 +1,5 @@
+name: test-stream
+description: Test stream description
+credentials:
+  username: test-user
+  password: test-password
